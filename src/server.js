@@ -11,7 +11,7 @@ var upload = multer({ dest: '../public/uploads/' });
 const operatorAccount = '';
 const operatorPrivateKey = '';
 if (operatorAccount == null || operatorPrivateKey == null ) {
-  throw new Error('Environment variables myAccountId and myPrivateKey must be present');
+  throw new Error('Environment variables operatorAccount and operatorPrivateKey must be present');
 };
 
 // set up Testnet Client
