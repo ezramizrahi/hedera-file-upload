@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h3 align="center">Hedera Hashgraph Consensus Service</h3>
+  <h3 align="center">Hedera Hashgraph Topic Creation</h3>
 </p>
 
 
@@ -17,7 +17,7 @@
 
 ## About
 
-Testing the [Hedera Hashgraph](https://docs.hedera.com/guides/docs/sdks) Consensus Service. Upload a file using React and an Express server. On upload, a message is submitted to the Hedera Hashgraph network containing the original filename.
+Testing part of the [Hedera Hashgraph](https://docs.hedera.com/guides/docs/sdks) Consensus Service. Upload a file using React and an Express server. On upload, a message is submitted to the Hedera Hashgraph network containing the original filename.
 
 Within the Hedera Hashgraph Consensus Service, client applications submit a message (a string of bytes) and give the message a topic (an ID number). This message can include relevant details of a transaction, such as a bid on a financial asset, or in this case, the name of the file. The topic (the ID) will allow messages with the same topic to be classified together. Read more here: [Hedera Hashgraph Consensus Service White Paper](https://hedera.com/hh-consensus-service-whitepaper.pdf).
 
