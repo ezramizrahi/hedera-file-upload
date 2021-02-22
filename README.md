@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h3 align="center">Hedera Hashgraph Cryptocurrency Transfer</h3>
+  <h3 align="center">Hedera Hashgraph Consensus Service</h3>
 </p>
 
 
@@ -17,11 +17,15 @@
 
 ## About
 
-Testing the [Hedera Hashgraph JavaScript SDK](https://docs.hedera.com/guides/docs/sdks). Transferring Hbars from my Testnet account to another.
+Testing the [Hedera Hashgraph](https://docs.hedera.com/guides/docs/sdks) Consensus Service. Upload a file using React and an Express server. On upload, a message is submitted to the Hedera Hashgraph network containing the original filename.
+
+Within the Hedera Hashgraph Consensus Service, client applications submit a message (a string of bytes) and give the message a topic (an ID number). This message can include relevant details of a transaction, such as a bid on a financial asset, or in this case, the name of the file. The topic (the ID) will allow messages with the same topic to be classified together.
 
 ### Built With
 
-* [Node](https://nodejs.org/en/)
+* [React](https://reactjs.org/)
+* [Express](https://expressjs.com/)
+* [Multer](https://github.com/expressjs/multer)
 * [Hedera Hashgraph JavaScript SDK](https://docs.hedera.com/guides/docs/sdks)
 
 ## Getting Started
@@ -30,22 +34,27 @@ To get a local copy up and running follow these simple steps:
 
 ### Installation
 
-1. Have Node installed
+1. Sign up for a Testnet account to get an ID and keys from [Hedera](https://hedera.com/).
 
-2. Sign up for a Testnet account to get an ID and keys from [Hedera](https://hedera.com/).
+2. Clone the repo
 
-3. Clone the repo
-
-4. Install the packages
+3. Install the packages
 ```sh
 npm install
 ```
-5. Add your account id and keys in the `.env` file
+5. Add your account id and keys in the `server.js` file
 
-6. Run it
+6. Start the server
 ```bash
-node index.js
+node server.js
 ```
+
+7. Start the React frontend
+```bash
+npm start
+```
+
+8. Upload a file
 
 ## Contact
 
