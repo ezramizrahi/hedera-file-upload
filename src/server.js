@@ -1,24 +1,24 @@
 const { Client, TopicCreateTransaction, TopicMessageSubmitTransaction, Hbar } = require("@hashgraph/sdk");
-const express = require("express");
-const multer = require("multer");
-const cors = require("cors");
+const express = require('express');
+const multer = require('multer');
+const cors = require('cors');
 const app = express();
 app.use(cors());
 
-var upload = multer({ dest: "../public/uploads/" });
+var upload = multer({ dest: '../public/uploads/' });
 
 // keys
 const operatorAccount = '';
 const operatorPrivateKey = '';
 if (operatorAccount == null || operatorPrivateKey == null ) {
-  throw new Error("Environment variables myAccountId and myPrivateKey must be present");
+  throw new Error('Environment variables myAccountId and myPrivateKey must be present');
 };
 
 // set up Testnet Client
 const client = Client.forTestnet();
 client.setOperator(operatorAccount, operatorPrivateKey);
 
-app.post("/upload", upload.single("file"), async (req, res) => {
+app.post('/upload', upload.single('file'), async (req, res) => {
   try {
     if (req.file) {
       // create topic transaction
@@ -42,7 +42,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     } else {
       res.status(400).send({
         status: false,
-        data: "File Not Found :(",
+        data: 'No file found.',
       });
     }
   } catch (err) {
@@ -50,4 +50,4 @@ app.post("/upload", upload.single("file"), async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server Running..."));
+app.listen(5000, () => console.log('The server is running on port 5000...'));

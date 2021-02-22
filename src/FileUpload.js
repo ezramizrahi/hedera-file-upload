@@ -11,10 +11,10 @@ function FileUpload() {
   const uploadFile = (e) => {
     e.preventDefault();
     const data = new FormData();
-    data.append("file", fileData);
+    data.append('file', fileData);
     axios({
-      method: "POST",
-      url: "http://localhost:5000/upload",
+      method: 'POST',
+      url: 'http://localhost:5000/upload',
       data: data,
     }).then((res) => {
       // we should get the message and topicId here
@@ -24,8 +24,8 @@ function FileUpload() {
 
   return (
     <form onSubmit={uploadFile}>
-      <input type="file" name="file" onChange={getFile} required />
-      <input type="submit" name="upload" value="Upload" />
+      <input type='file' name=='file' onChange={getFile} required />
+      <input type='submit' name='upload' value='Upload' />
     </form>
   );
 }
