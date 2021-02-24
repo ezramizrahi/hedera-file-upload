@@ -11,6 +11,7 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
+* [To Do](#to-do)
 * [Contact](#contact)
 
 
@@ -55,6 +56,9 @@ npm start
 ```
 
 8. Upload a file
+
+## To Do
+* CSS styling
 
 ## Contact
 
